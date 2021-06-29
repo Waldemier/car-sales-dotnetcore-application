@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Configuration.cs" />
+      <Folder Include="Extensions" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CarSales.Application\CarSales.Application.csproj" />
+      <ProjectReference Include="..\CarSales.Domain\CarSales.Domain.csproj" />
+      <ProjectReference Include="..\CarSales.EFData\CarSales.EFData.csproj" />
+      <ProjectReference Include="..\CarSales.LoggerService\CarSales.LoggerService.csproj" />
+    </ItemGroup>
+
+</Project>

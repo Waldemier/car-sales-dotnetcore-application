@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Dtos" />
+      <Folder Include="Exceptions" />
+      <Folder Include="Extensions" />
+      <Folder Include="FluentValidators" />
+      <Folder Include="Profiles" />
+      <Folder Include="Services\Implementations" />
+      <Folder Include="Services\Interfaces" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CarSales.Domain\CarSales.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
