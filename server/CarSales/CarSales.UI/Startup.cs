@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CarSales.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,11 @@ namespace CarSales.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            services.CorsConfiguration();
+            services.ConfigurationDbContext(Configuration);
+            services.UnitOfWorkConfiguration();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "CarSales.UI", Version = "v1"});
