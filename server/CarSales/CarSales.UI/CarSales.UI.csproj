@@ -9,12 +9,13 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="NLog" Version="4.7.10" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ActionFilters" />
-      <Folder Include="Middlewares" />
+      <Folder Include="InternalLogs" />
+      <Folder Include="Logs" />
       <Folder Include="ModelBinders" />
     </ItemGroup>
 

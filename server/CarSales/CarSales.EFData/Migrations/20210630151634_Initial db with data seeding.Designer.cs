@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarSales.EFData.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210629224539_Initial tables with seeding data")]
-    partial class Initialtableswithseedingdata
+    [Migration("20210630151634_Initial db with data seeding")]
+    partial class Initialdbwithdataseeding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -128,7 +128,7 @@ namespace CarSales.EFData.Migrations
                             EngineType = 0,
                             GraduationYear = 2011L,
                             InWanted = false,
-                            LicensePlate = "СЕ 1786 ВА",
+                            LicensePlate = "СЕ1786ВА",
                             Mark = "Lexus",
                             Mileage = 230L,
                             Price = 24000.0,
@@ -150,7 +150,7 @@ namespace CarSales.EFData.Migrations
                             EngineType = 0,
                             GraduationYear = 2012L,
                             InWanted = false,
-                            LicensePlate = "BС 6040 CP",
+                            LicensePlate = "BС6040CP",
                             Mark = "Bentley",
                             Mileage = 150L,
                             Price = 43000.0,
@@ -172,7 +172,7 @@ namespace CarSales.EFData.Migrations
                             EngineType = 0,
                             GraduationYear = 2008L,
                             InWanted = false,
-                            LicensePlate = "BB 4177 CH",
+                            LicensePlate = "BB4177CH",
                             Mark = "Audi",
                             Mileage = 200L,
                             Price = 11000.0,
@@ -228,9 +228,8 @@ namespace CarSales.EFData.Migrations
                         .HasMaxLength(60)
                         .HasColumnType("nvarchar(60)");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("PhoneNumber")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Rating")
                         .HasColumnType("int");
@@ -257,8 +256,8 @@ namespace CarSales.EFData.Migrations
                             Email = "admin@gmail.com",
                             FirstName = "Admin",
                             LastName = "Admin",
-                            Password = "$2a$11$1I0k5eL3xQUdwy4QA9Wgxuial4eKp5KBeCRYhQ38lxCOO94EybOte",
-                            PhoneNumber = "() --",
+                            Password = "$2a$11$pgcc7ZkxxL8Vw1.yd9CYPu3Jft61Y7Tw7vwyPGXW61fwIQZSxFXGy",
+                            PhoneNumber = 0L,
                             Rating = 0,
                             Role = 0
                         },
@@ -269,8 +268,8 @@ namespace CarSales.EFData.Migrations
                             Email = "marksh@gmail.com",
                             FirstName = "Марк",
                             LastName = "Шульц",
-                            Password = "$2a$11$934/VyqWptg3Ysu5bzUUv.HqRIxsGJcmfykqmCkfGg/UNst8tPBzm",
-                            PhoneNumber = "(97) 500-49-32",
+                            Password = "$2a$11$AgnmBDzSZbGSFtT49ItBhO7AacNm7Mf/3gYKYbthwLmovZEQjZrxy",
+                            PhoneNumber = 975004932L,
                             Rating = 0,
                             Role = 2
                         },
@@ -281,8 +280,8 @@ namespace CarSales.EFData.Migrations
                             Email = "vladgan@gmail.com",
                             FirstName = "Владислав",
                             LastName = "Гань",
-                            Password = "$2a$11$Z1fZuDlQouqPo5pP8Ql97uYAmzQ9sdTJ88G8Gt/csUPJa.FQe7thC",
-                            PhoneNumber = "(96) 400-20-17",
+                            Password = "$2a$11$G/MrguBCX4gFaOutCNRnBujICsvXf2xsxj8ku4e8ikAD5niLSONsq",
+                            PhoneNumber = 964002017L,
                             Rating = 0,
                             Role = 1
                         },
@@ -293,8 +292,8 @@ namespace CarSales.EFData.Migrations
                             Email = "vasilman@gmail.com",
                             FirstName = "Василь",
                             LastName = "Маншань",
-                            Password = "$2a$11$HK5QCG8d/IrvtYwfYg6rLey0Iw/sNvzsSbRddTg8ro1JIJZdtntKu",
-                            PhoneNumber = "(63) 500-30-20",
+                            Password = "$2a$11$wYdk1WpPyGMgcfkvCHUqnecEJvwsxQmwT.TOcfjw.5ewTWT.8oKfe",
+                            PhoneNumber = 635003020L,
                             Rating = 0,
                             Role = 1
                         },
@@ -305,8 +304,8 @@ namespace CarSales.EFData.Migrations
                             Email = "arturgol@gmail.com",
                             FirstName = "Артур",
                             LastName = "Голодов",
-                            Password = "$2a$11$bIr5l8u/L9mU4haVDWvBAObeNKGl50RZUyG5V.H0ITx/5/QPYAFJu",
-                            PhoneNumber = "(67) 300-60-25",
+                            Password = "$2a$11$zZlB7VNo0MoKLQF4t6vy0u0BkuKr1Wfw381PXsZOQG3kYZgEsuLpW",
+                            PhoneNumber = 673006025L,
                             Rating = 0,
                             Role = 1
                         });

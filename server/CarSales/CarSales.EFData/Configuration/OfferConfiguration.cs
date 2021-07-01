@@ -16,7 +16,7 @@ namespace CarSales.EFData.Configuration
                 {
                     Id = new Guid("05fccabb-e6b6-4cd5-aae5-75121562ddd2"),
                     VIN = "1N4AL2AP0BC131620",
-                    LicensePlate = new string("СЕ 1786 ВА").ToUpper(),
+                    LicensePlate = new string("СЕ1786ВА").ToUpper(),
                     Price = 24000,
                     GraduationYear = 2011,
                     CityOfSale = "Чернівці",
@@ -36,7 +36,7 @@ namespace CarSales.EFData.Configuration
                 {
                     Id = new Guid("4a053157-3653-4fb9-9a80-1cf13f753fbb"),
                     VIN = "1C4HJWEG3DL545476",
-                    LicensePlate = new string("BС 6040 CP").ToUpper(),
+                    LicensePlate = new string("BС6040CP").ToUpper(),
                     Price = 43000,
                     GraduationYear = 2012,
                     CityOfSale = "Київ",
@@ -56,7 +56,7 @@ namespace CarSales.EFData.Configuration
                 {
                     Id = new Guid("4ccf9ec7-ebfd-4dcd-a43c-93a6681deace"),
                     VIN = "JN8DR09X82W636032",
-                    LicensePlate = new string("BB 4177 CH").ToUpper(),
+                    LicensePlate = new string("BB4177CH").ToUpper(),
                     Price = 11000,
                     GraduationYear = 2008,
                     CityOfSale = "Львів",

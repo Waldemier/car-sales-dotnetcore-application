@@ -15,19 +15,19 @@ namespace CarSales.Domain.Entities
         
         public uint GraduationYear { get; set; }
 
-        public string CityOfSale { get; set; } = "Не вказано";
+        public string CityOfSale { get; set; }
         
         public string Description { get; set; }
         
         public string Mark { get; set; }
         
-        public bool ElectricCar { get; set; } = false;
+        public bool ElectricCar { get; set; }
         
         public bool InWanted { get; set; }
         
         public bool Accident { get; set; }
 
-        public string Color { get; set; } = "Не вказано";
+        public string Color { get; set; }
         
         public EngineTypes EngineType { get; set; }
         

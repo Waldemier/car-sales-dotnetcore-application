@@ -1,7 +1,6 @@
 using System;
 using CarSales.Domain.Entities;
 using CarSales.Domain.Enums;
-using CarSales.EFData.Constants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -20,7 +19,7 @@ namespace CarSales.EFData.Configuration
                     Email = "admin@gmail.com",
                     DateOfBirth = new DateTime(1800, 8, 8),
                     Password = BCrypt.Net.BCrypt.HashPassword("Admin123!"),
-                    PhoneNumber = String.Format(GeneralConstants.PhoneFormat, 0000000000),
+                    PhoneNumber = 0000000000,
                     Role = RoleTypes.Admin
                 },
                 new User
@@ -31,7 +30,7 @@ namespace CarSales.EFData.Configuration
                     Email = "marksh@gmail.com",
                     DateOfBirth = new DateTime(1999, 2, 18),
                     Password = BCrypt.Net.BCrypt.HashPassword("12345@Vv"),
-                    PhoneNumber = String.Format(GeneralConstants.PhoneFormat, 0975004932),
+                    PhoneNumber =  0975004932,
                     Role = RoleTypes.Manager
                 },
                 new User
@@ -42,7 +41,7 @@ namespace CarSales.EFData.Configuration
                     Email = "vladgan@gmail.com",
                     DateOfBirth = new DateTime(1998, 5, 7),
                     Password = BCrypt.Net.BCrypt.HashPassword("12345@Vv"),
-                    PhoneNumber = String.Format(GeneralConstants.PhoneFormat, 0964002017),
+                    PhoneNumber = 0964002017,
                     Role = RoleTypes.Seller
                 },
                 new User
@@ -53,7 +52,7 @@ namespace CarSales.EFData.Configuration
                     Email = "vasilman@gmail.com",
                     DateOfBirth = new DateTime(1980, 4, 10),
                     Password = BCrypt.Net.BCrypt.HashPassword("12345@Vv"),
-                    PhoneNumber = String.Format(GeneralConstants.PhoneFormat, 0635003020),
+                    PhoneNumber = 0635003020,
                     Role = RoleTypes.Seller
                 },
                 new User
@@ -64,7 +63,7 @@ namespace CarSales.EFData.Configuration
                     Email = "arturgol@gmail.com",
                     DateOfBirth = new DateTime(1981, 2, 3),
                     Password = BCrypt.Net.BCrypt.HashPassword("12345@Vv"),
-                    PhoneNumber = String.Format(GeneralConstants.PhoneFormat, 0673006025),
+                    PhoneNumber = 0673006025,
                     Role = RoleTypes.Seller
                 }
             );

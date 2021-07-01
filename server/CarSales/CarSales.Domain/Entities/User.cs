@@ -13,11 +13,11 @@ namespace CarSales.Domain.Entities
         
         public string Email { get; set; }
 
-        public string PhoneNumber { get; set; } = null;
+        public uint PhoneNumber { get; set; }
 
         public int Rating { get; set; } = 0;
 
-        public byte[] Avatar { get; set; } = null;
+        public byte[] Avatar { get; set; }
         
         public DateTime DateOfBirth { get; set; }
         

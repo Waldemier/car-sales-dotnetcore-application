@@ -2,6 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using CarSales.Domain;
+using CarSales.Domain.Entities;
 using CarSales.Domain.Interfaces;
 using CarSales.EFData.Repositories;
 
@@ -17,16 +18,17 @@ namespace CarSales.EFData
         
         public UnitOfWork(ApplicationContext context)
         {
-            this._imagesRepository ??= new ImageRepository(context);
-            this._offersRepository ??= new OfferRepository(context);
-            this._usersRepository ??= new UserRepository(context);
-            this._reviewsRepository ??= new ReviewRepository(context);
+            this._context = context;
+            this._imagesRepository ??= new ImageRepository<Image>(this._context);
+            this._offersRepository ??= new OfferRepository<Offer>(this._context);
+            this._usersRepository ??= new UserRepository<User>(this._context);
+            this._reviewsRepository ??= new ReviewRepository<Review>(this._context);
         }
-        
+
+        public Task SaveChangesAsync() => this._context.SaveChangesAsync();
         public IImageRepository Images => this._imagesRepository ?? throw new ArgumentNullException(nameof(this._imagesRepository));
         public IOfferRepository Offers => this._offersRepository ?? throw new ArgumentNullException(nameof(this._offersRepository));
         public IUserRepository Users => this._usersRepository ?? throw new ArgumentNullException(nameof(this._usersRepository));
         public IReviewRepository Reviews => this._reviewsRepository ?? throw new ArgumentNullException(nameof(this._reviewsRepository));
-        public Task SaveChangesAsync() => this._context.SaveChangesAsync();
     }
 }

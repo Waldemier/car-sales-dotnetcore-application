@@ -1,4 +1,4 @@
-namespace CarSales.EFData.Constants
+namespace CarSales.Application.Constants
 {
     public static class GeneralConstants
     {

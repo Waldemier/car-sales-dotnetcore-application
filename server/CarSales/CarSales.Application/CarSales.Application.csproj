@@ -5,17 +5,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="DataTrasferObjects" />
+      <Folder Include="DataTrasferObjects\Create" />
+      <Folder Include="DataTrasferObjects\Update" />
       <Folder Include="Exceptions" />
-      <Folder Include="Extensions" />
-      <Folder Include="FluentValidators" />
-      <Folder Include="Profiles" />
-      <Folder Include="Services\Implementations" />
-      <Folder Include="Services\Interfaces" />
+      <Folder Include="FluentValidators\Create" />
+      <Folder Include="FluentValidators\Update" />
+      <Folder Include="RequestFeatures" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\CarSales.Domain\CarSales.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="10.2.3" />
     </ItemGroup>
 
 </Project>

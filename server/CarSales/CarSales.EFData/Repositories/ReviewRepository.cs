@@ -3,7 +3,7 @@ using CarSales.Domain.Interfaces;
 
 namespace CarSales.EFData.Repositories
 {
-    public class ReviewRepository: BaseRepository<Review>, IReviewRepository
+    public class ReviewRepository<T>: BaseRepository<T>, IReviewRepository where T: Review
     {
         public ReviewRepository(ApplicationContext context): 
             base(context)

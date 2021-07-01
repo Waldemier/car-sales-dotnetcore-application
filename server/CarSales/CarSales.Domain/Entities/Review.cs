@@ -8,7 +8,6 @@ namespace CarSales.Domain.Entities
     {
         public Guid UserId { get; set; }
         
-        [ForeignKey(nameof(UserId))]
         public User User { get; set; }
         
         public string Comment { get; set; }

@@ -8,7 +8,6 @@ namespace CarSales.Domain.Entities
     {
         public Guid OfferId { get; set; }
         
-        [ForeignKey((nameof(OfferId)))]
         public Offer Offer { get; set; }
         
         public byte[] OfferImage { get; set; }
