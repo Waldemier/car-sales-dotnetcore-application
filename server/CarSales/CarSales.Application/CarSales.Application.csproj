@@ -7,7 +7,6 @@
     <ItemGroup>
       <Folder Include="DataTrasferObjects\Create" />
       <Folder Include="DataTrasferObjects\Update" />
-      <Folder Include="Exceptions" />
       <Folder Include="FluentValidators\Create" />
       <Folder Include="FluentValidators\Update" />
       <Folder Include="RequestFeatures" />
@@ -20,6 +19,7 @@
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="10.1.1" />
       <PackageReference Include="FluentValidation.AspNetCore" Version="10.2.3" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
 </Project>

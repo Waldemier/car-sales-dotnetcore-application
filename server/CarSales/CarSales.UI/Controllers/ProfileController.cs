@@ -25,7 +25,6 @@ namespace CarSales.UI.Controllers
         public IActionResult GetSpecificUser(Guid Id)
         {
             var userToView = HttpContext.Items["user"] as UserDto;
-            
             return Ok(userToView);
         }
     }

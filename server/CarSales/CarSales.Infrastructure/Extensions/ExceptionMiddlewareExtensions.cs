@@ -9,6 +9,11 @@ namespace CarSales.Infrastructure.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
+        /// <summary>
+        /// Custom exception handler provided for production regime.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="logger"></param>
         public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILoggerManager logger)
         {
             app.UseExceptionHandler(appError =>
@@ -26,7 +31,8 @@ namespace CarSales.Infrastructure.Extensions
                         await context.Response.WriteAsync(new ErrorDetails
                         {
                             StatusCode = context.Response.StatusCode,
-                            Message = "Internal Server Error."
+                            Message = "Internal Server Error.",
+                            Description = contextFeature.Error.ToString()
                         }.ToString());
                     }
                 });

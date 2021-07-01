@@ -1,5 +1,6 @@
 using System;
 using CarSales.Application.DataTrasferObjects;
+using CarSales.Application.Helpers;
 using CarSales.Application.Services;
 using CarSales.Domain.Interfaces.Other;
 using CarSales.UI.ActionFilters;
@@ -33,7 +34,6 @@ namespace CarSales.UI.Controllers
         public IActionResult GetSpecificOffer(Guid Id)
         {
             var offerToView = HttpContext.Items["offer"] as OfferDto;
-            
             return Ok(offerToView);
         }
         
